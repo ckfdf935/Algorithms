@@ -2,7 +2,9 @@ add_executable(LAB2 lab2.cpp)
 
 target_link_libraries(LAB2 PRIVATE LibraryCPP)
 target_include_directories(LAB2 PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../LibraryCPP)
-target_link_options(LAB2 PRIVATE -static)
+if(MINGW)
+    target_link_options(LAB2 PRIVATE -static)
+endif()
 
 enable_testing()
 
