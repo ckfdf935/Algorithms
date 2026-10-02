@@ -23,11 +23,11 @@ void computeDecades(const Array *data, Decades decades[3])
 {
     size_t n = array_size(data);
     if (n == 0)
-        throw std::runtime_error("Massiv pust");
+        throw runtime_error("Massiv pust");
 
     size_t decadeSize = n / 3;
     if (decadeSize == 0)
-        throw std::runtime_error("Slishkom malo elementov dlya deleniya na tri dekady");
+        throw runtime_error("Slishkom malo elementov dlya deleniya na tri dekady");
 
     size_t start = 0;
     for (int i = 0; i < 3; i++)
