@@ -23,3 +23,4 @@ foreach(i RANGE 1 15)
     )
     set_tests_properties(Lab2_Check_${i} PROPERTIES DEPENDS Lab2_Run_${i})
 endforeach()
+
